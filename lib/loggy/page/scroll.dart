@@ -36,8 +36,6 @@ class Scroll extends StatelessWidget {
             ),
             centerTitle: true,
           ),
-
-          // Birinchi SliverPersistentHeader
           SliverPersistentHeader(
             pinned: false,
             floating: true,
@@ -124,24 +122,34 @@ class Scroll extends StatelessWidget {
             ),
           ),
           SliverPersistentHeader(
-            pinned: true,
+            pinned: false,
             floating: true,
             delegate: _SliverAppBarDelegate(
-              child: Container(
-                color: Colors.blue,
-                padding: const EdgeInsets.all(16.0),
-                alignment: Alignment.centerLeft,
-                child: Text(
-                  "New Section",
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold),
+              child: Padding(
+                padding: const EdgeInsets.only(left: 10.0, right: 10),
+                child: Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        "Men's Fashion",
+                        style: TextStyle(
+                            color: Colors.black,
+                            fontSize: 24,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    Text(
+                      "See all",
+                      style: TextStyle(
+                          color: Colors.black38,
+                          fontSize: 19,
+                          fontWeight: FontWeight.bold),
+                    ),
+                  ],
                 ),
               ),
             ),
           ),
-
           SliverPadding(
             padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
             sliver: SliverGrid(
