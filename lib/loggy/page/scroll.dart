@@ -38,7 +38,7 @@ class Scroll extends StatelessWidget {
           ),
           SliverPersistentHeader(
             pinned: false,
-            floating: true,
+            // floating: true,
             delegate: _SliverAppBarDelegate(
               child: Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
@@ -50,7 +50,8 @@ class Scroll extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.black,
                             fontSize: 24,
-                            fontWeight: FontWeight.bold),
+                            fontWeight: FontWeight.bold,
+                        ),
                       ),
                     ),
                     Text(
@@ -58,7 +59,8 @@ class Scroll extends StatelessWidget {
                       style: TextStyle(
                           color: Colors.black38,
                           fontSize: 19,
-                          fontWeight: FontWeight.bold),
+                          fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ],
                 ),
@@ -123,7 +125,7 @@ class Scroll extends StatelessWidget {
           ),
           SliverPersistentHeader(
             pinned: false,
-            floating: true,
+            // floating: true,
             delegate: _SliverAppBarDelegate(
               child: Padding(
                 padding: const EdgeInsets.only(left: 10.0, right: 10),
