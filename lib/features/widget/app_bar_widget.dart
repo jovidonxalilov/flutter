@@ -10,11 +10,15 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     this.actions,
     this.bottom,
     this.toolbarHeight=60,
+    this.backgroundColor = Colors.white,
+    this.textColor = AppColors.black,
+    this.iconColor = AppColors.black,
   });
 
   final String title;
   final List<Widget>? actions;
   final double toolbarHeight;
+  final Color backgroundColor, textColor, iconColor;
   final PreferredSizeWidget? bottom;
 
 
@@ -31,7 +35,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
       padding: const EdgeInsets.only(top: 12, left: 15, right: 25),
       child: AppBar(
         surfaceTintColor: Colors.transparent,
-        backgroundColor: AppColors.white,
+        backgroundColor: backgroundColor,
         leading: IconButton(
           onPressed: () {
             context.pop();
@@ -40,13 +44,14 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           icon: Icon(
             Icons.arrow_back,
             size: 25,
+            color: iconColor,
           ),
         ),
         centerTitle: true,
         title: Text(
           title,
           style: TextStyle(
-            color: AppColors.black,
+            color: textColor,
             fontSize: 24.sp,
             fontWeight: FontWeight.w600,
           ),

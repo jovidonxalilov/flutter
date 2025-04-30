@@ -7,12 +7,13 @@ import 'package:loggy/62-dars/page/dars/second_page.dart';
 import 'package:loggy/62-dars/page/uy-ishi/claoude_animation.dart';
 import 'package:loggy/63-dars/page/canvas_detail.dart';
 import 'package:loggy/63-dars/page/dars/canvas.dart';
+import 'package:loggy/63-dars/page/uy-ishi/soat_detail.dart';
 import 'package:loggy/core/natigation/routes.dart';
 import 'package:loggy/features/home/page/home_page.dart';
 import 'package:loggy/loggy/page/scroll.dart';
 
 final router = GoRouter(
-  initialLocation: Routes.home,
+  initialLocation: Routes.soat,
   routes: [
     GoRoute(
       path: Routes.home,
@@ -74,6 +75,9 @@ final router = GoRouter(
       path: Routes.animatedDetail,
       builder: (context, state) => AnimatedDetail(),
     ),
-
+    GoRoute(
+      path: Routes.soat,
+      builder: (context, state) => SoatDetail(),
+    ),
   ],
 );

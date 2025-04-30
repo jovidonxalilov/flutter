@@ -9,5 +9,6 @@ class Routes{
   static const claudeAnimation = '/claude';
   static const animatedDetail = '/animated-detail';
   static const canvas = '/canvas';
+  static const soat = '/soat';
   static const canvasDetail = '/canvas-detail';
 }
