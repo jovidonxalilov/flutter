@@ -1,38 +1,43 @@
 import 'package:go_router/go_router.dart';
-import 'package:loggy/62-dars/page/animated.dart';
-import 'package:loggy/62-dars/page/external_animation.dart';
-import 'package:loggy/62-dars/page/first_page.dart';
-import 'package:loggy/62-dars/page/second_page.dart';
-import 'package:loggy/62-dars/uy-ishi/claoude_animation.dart';
+import 'package:loggy/62-dars/page/62-detail.dart';
+import 'package:loggy/62-dars/page/dars/animated.dart';
+import 'package:loggy/62-dars/page/dars/external_animation.dart';
+import 'package:loggy/62-dars/page/dars/first_page.dart';
+import 'package:loggy/62-dars/page/dars/second_page.dart';
+import 'package:loggy/62-dars/page/uy-ishi/claoude_animation.dart';
+import 'package:loggy/63-dars/page/canvas_detail.dart';
+import 'package:loggy/63-dars/page/dars/canvas.dart';
 import 'package:loggy/core/natigation/routes.dart';
-import 'package:loggy/loggy/page/home_page.dart';
+import 'package:loggy/features/home/page/home_page.dart';
 import 'package:loggy/loggy/page/scroll.dart';
-import 'package:loggy/loggy/view_model/user_view_model.dart';
-import 'package:provider/provider.dart';
 
 final router = GoRouter(
-  initialLocation: Routes.claudeAnimation,
+  initialLocation: Routes.home,
   routes: [
     GoRoute(
-      path: Routes.login,
-      builder: (context, state) => ChangeNotifierProvider(
-        create: (context) {
-          UserViewModel(repo: context.read());
-        },
-        child: HomePage(),
-      ),
-    ),
-    GoRoute(
       path: Routes.home,
-      builder: (context, state) => ChangeNotifierProvider(
-        create: (context) {
-          UserViewModel(
-            repo: context.read(),
-          );
-        },
-        child: HomePage(),
-      ),
+      builder: (context, state) => HomePage(),
     ),
+    // GoRoute(
+    //   path: Routes.login,
+    //   builder: (context, state) => ChangeNotifierProvider(
+    //     create: (context) {
+    //       UserViewModel(repo: context.read());
+    //     },
+    //     child: HomePage(),
+    //   ),
+    // ),
+    // GoRoute(
+    //   path: Routes.home,
+    //   builder: (context, state) => ChangeNotifierProvider(
+    //     create: (context) {
+    //       UserViewModel(
+    //         repo: context.read(),
+    //       );
+    //     },
+    //     child: HomePage(),
+    //   ),
+    // ),
     GoRoute(
       path: Routes.scroll,
       builder: (context, state) => Scroll(),
@@ -57,5 +62,18 @@ final router = GoRouter(
       path: Routes.claudeAnimation,
       builder: (context, state) => ClaudeAnimation(),
     ),
+    GoRoute(
+      path: Routes.canvas,
+      builder: (context, state) => CanvasWidget(),
+    ),
+    GoRoute(
+      path: Routes.canvasDetail,
+      builder: (context, state) => CanvasDetail(),
+    ),
+    GoRoute(
+      path: Routes.animatedDetail,
+      builder: (context, state) => AnimatedDetail(),
+    ),
+
   ],
 );

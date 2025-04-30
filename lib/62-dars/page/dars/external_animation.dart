@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:loggy/features/widget/app_bar_widget.dart';
 
 class ExternalAnimation extends StatefulWidget {
   const ExternalAnimation({super.key});
@@ -49,6 +50,8 @@ class _ExternalAnimationState extends State<ExternalAnimation>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBarWidget(title: "Animated Controller"),
       body: Center(
         child: AnimatedBuilder(
           animation: _animation,

@@ -2,11 +2,12 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:loggy/62-dars/uy-ishi/claude_widget.dart';
+import 'package:loggy/62-dars/page/uy-ishi/claude_widget.dart';
 
 import 'dart:async';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
+import 'package:loggy/features/widget/app_bar_widget.dart';
 
 class ClaudeAnimation extends StatefulWidget {
   const ClaudeAnimation({super.key});
@@ -58,6 +59,8 @@ class _ClaudeAnimationState extends State<ClaudeAnimation>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBarWidget(title: "Claude Animation"),
       body: Center(
         child: Padding(
           padding: const EdgeInsets.only(top: 40, left: 25, right: 25),
@@ -189,7 +192,7 @@ class _ClaudeAnimationState extends State<ClaudeAnimation>
                               angle: math.pi / 2,
                               child: Icon(
                                 Icons.flight,
-                                color: isFlying ? Colors.blue : Colors.grey[900],
+                                color: isFlying ? Colors.blue : Colors.black,
                                 size: 50,
                               ),
                             ),
