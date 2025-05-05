@@ -8,12 +8,15 @@ import 'package:loggy/62-dars/page/uy-ishi/claoude_animation.dart';
 import 'package:loggy/63-dars/page/canvas_detail.dart';
 import 'package:loggy/63-dars/page/dars/canvas.dart';
 import 'package:loggy/63-dars/page/uy-ishi/soat_detail.dart';
+import 'package:loggy/65-dars/category/page/living_detail.dart';
+import 'package:loggy/66-dars/auth/login/page/login_detail.dart';
+import 'package:loggy/66-dars/page/journal_daily_detail.dart';
 import 'package:loggy/core/natigation/routes.dart';
 import 'package:loggy/features/home/page/home_page.dart';
 import 'package:loggy/loggy/page/scroll.dart';
 
 final router = GoRouter(
-  initialLocation: Routes.soat,
+  initialLocation: Routes.login,
   routes: [
     GoRoute(
       path: Routes.home,
@@ -79,5 +82,22 @@ final router = GoRouter(
       path: Routes.soat,
       builder: (context, state) => SoatDetail(),
     ),
+    GoRoute(
+      path: Routes.living,
+      builder: (context, state) => LivingDetail(),
+    ),
+    GoRoute(
+      path: Routes.journalDaily,
+      builder: (context, state) => QuizScreen(),
+    ),
+    GoRoute(
+      path: Routes.login,
+      builder: (context, state) => LoginDetail(),
+    ),
+    GoRoute(
+      path: Routes.journalDaily,
+      builder: (context, state) => QuizScreen(),
+    ),
+
   ],
 );

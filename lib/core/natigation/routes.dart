@@ -10,5 +10,8 @@ class Routes{
   static const animatedDetail = '/animated-detail';
   static const canvas = '/canvas';
   static const soat = '/soat';
+  static const living = '/living';
   static const canvasDetail = '/canvas-detail';
+  static const journalDaily = '/journal-daily';
+  static const splash = '/splash';
 }

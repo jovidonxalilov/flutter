@@ -37,13 +37,13 @@ class HomePage extends StatelessWidget {
                   callback: () {
                     context.push(Routes.animatedDetail);
                   },
-                  text: "Animated 62-dars",
+                  text: "Animated 62-category",
                 ),
                 ElevatedButtonWidget(
                   callback: () {
                     context.push(Routes.canvasDetail);
                   },
-                  text: "Canvas 63-dars",
+                  text: "Canvas 63-category",
                 ),
               ],
             ),

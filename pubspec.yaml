@@ -39,6 +39,9 @@ dependencies:
   provider: ^6.1.4
   flutter_screenutil: ^5.9.3
   flutter_svg: ^2.1.0
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.5.3
 
 dev_dependencies:
   flutter_test:
@@ -52,7 +55,7 @@ dev_dependencies:
   flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
-# following dars: https://dart.dev/tools/pub/pubspec
+# following category: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
 flutter:

@@ -75,22 +75,22 @@ class Soat extends CustomPainter {
     canvas.drawLine(center, Offset(endX, endY), secondPaint);
 
     final minutAngle = (pi / 30) * dateTime.minute;
-    final minutLength = radius - 10;
+    final minutLength = radius - 15;
     final minuteEndX = center.dx + minutLength * sin(minutAngle);
     final minuteEndY = center.dy - minutLength * cos(minutAngle);
     final minutePaint = Paint()
       ..color = Colors.blue
-      ..strokeWidth = 6.0
+      ..strokeWidth = 7
       ..strokeCap = StrokeCap.round;
     canvas.drawLine(center, Offset(minuteEndX, minuteEndY), minutePaint);
 
     final soatAngle = (pi / 6) * (dateTime.hour % 12 + dateTime.minute / 60);
-    final soatLength = radius - 10;
+    final soatLength = radius - 25;
     final soatEndX = center.dx + soatLength * sin(soatAngle);
     final soatEndY = center.dy - soatLength * cos(soatAngle);
     final soatPaint = Paint()
       ..color = Colors.deepPurpleAccent
-      ..strokeWidth = 8.0
+      ..strokeWidth = 12
       ..strokeCap = StrokeCap.round;
     canvas.drawLine(center, Offset(soatEndX, soatEndY), soatPaint);
     final radiusCircle = 20.0;
@@ -99,10 +99,10 @@ class Soat extends CustomPainter {
       ..style = PaintingStyle.fill;
     canvas.drawCircle(center, radiusCircle, fillPaint);
 
-    var dividerPaint = Paint()
-    ..color = Colors.blueGrey
-    ..strokeWidth = 2.5
-    ..style = PaintingStyle.stroke;
+    // var dividerPaint = Paint()
+    // ..color = Colors.blueGrey
+    // ..strokeWidth = 2.5
+    // ..style = PaintingStyle.stroke;
     // dividerPaint.color = Colors.orange;
     // final starPath = Path();
     // starPath.moveTo(size.width / 2 , -7);

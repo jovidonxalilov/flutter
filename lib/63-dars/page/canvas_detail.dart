@@ -32,7 +32,7 @@ class CanvasDetail extends StatelessWidget {
             description: [
               ElevatedButtonWidget(
                 callback: () {
-                  context.push(Routes.canvas);
+                  context.push(Routes.soat);
                 },
                 text: "Canvas orqali shakllar chizish",
               ),

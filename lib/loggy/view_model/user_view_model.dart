@@ -8,7 +8,7 @@ class UserViewModel {
 
   final UserRepository _repo;
 
-  UserModel? user; // category emas, aniqroq nom beramiz
+  UserModel? user;
 
   final formKey = GlobalKey<FormState>();
   final loginController = TextEditingController();
@@ -17,7 +17,7 @@ class UserViewModel {
   Future<bool> login() async {
     final result = await _repo.login(loginController.text, passwordController.text);
     if (result != null) {
-      user = result as UserModel?; // foydalanuvchi ma'lumotini saqlab qo'yamiz
+      user = result as UserModel?;
       return true;
     }
     return false;
