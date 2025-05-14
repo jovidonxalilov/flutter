@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:loggy/66-dars/data/quiz_provider.dart';
+import 'package:loggy/66-dars/quiz_provider.dart';
 import 'package:loggy/66-dars/widget/answer.dart';
 import 'package:provider/provider.dart';
 class QuizScreen extends StatelessWidget {

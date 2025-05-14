@@ -28,11 +28,12 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:loggy/66-dars/data/quiz_provider.dart';
 import 'package:loggy/66-dars/page/journal_daily_detail.dart';
+import 'package:loggy/67-dars/data/image_provider.dart';
 import 'package:loggy/core/dependetsy/provider.dart';
 import 'package:loggy/core/natigation/router.dart';
 import 'package:loggy/loggy/page/user_detail.dart';
+import 'package:loggy/malumotlar/provider.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -47,8 +48,9 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider(
-          create: (context) => QuizProvider(),
+          create: (context) => ImagePickedProvider(),
         ),
+        ChangeNotifierProvider(create: (context) => PostProvider(),)
       ],
       builder: (context, child) => ScreenUtilInit(
         designSize: Size(430, 932),

@@ -14,4 +14,6 @@ class Routes{
   static const canvasDetail = '/canvas-detail';
   static const journalDaily = '/journal-daily';
   static const splash = '/splash';
+  static const image = '/image';
+  static const postScreen = '/post-screen';
 }

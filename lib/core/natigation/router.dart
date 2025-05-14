@@ -9,14 +9,15 @@ import 'package:loggy/63-dars/page/canvas_detail.dart';
 import 'package:loggy/63-dars/page/dars/canvas.dart';
 import 'package:loggy/63-dars/page/uy-ishi/soat_detail.dart';
 import 'package:loggy/65-dars/category/page/living_detail.dart';
-import 'package:loggy/66-dars/auth/login/page/login_detail.dart';
 import 'package:loggy/66-dars/page/journal_daily_detail.dart';
+import 'package:loggy/67-dars/page/image_picker_detail.dart';
 import 'package:loggy/core/natigation/routes.dart';
 import 'package:loggy/features/home/page/home_page.dart';
 import 'package:loggy/loggy/page/scroll.dart';
+import 'package:loggy/malumotlar/page/post_detail.dart';
 
 final router = GoRouter(
-  initialLocation: Routes.login,
+  initialLocation: Routes.postScreen,
   routes: [
     GoRoute(
       path: Routes.home,
@@ -90,14 +91,17 @@ final router = GoRouter(
       path: Routes.journalDaily,
       builder: (context, state) => QuizScreen(),
     ),
+    // GoRoute(
+    //   path: Routes.login,
+    //   builder: (context, state) => LoginDetail(),
+    // ),
     GoRoute(
-      path: Routes.login,
-      builder: (context, state) => LoginDetail(),
+      path: Routes.image,
+      builder: (context, state) => ImagePickerDetail(),
     ),
     GoRoute(
-      path: Routes.journalDaily,
-      builder: (context, state) => QuizScreen(),
+      path: Routes.postScreen,
+      builder: (context, state) => PostDetail(),
     ),
-
   ],
 );
