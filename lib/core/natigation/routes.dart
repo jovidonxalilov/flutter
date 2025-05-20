@@ -16,4 +16,6 @@ class Routes{
   static const splash = '/splash';
   static const image = '/image';
   static const postScreen = '/post-screen';
+  static const sending = '/sending';
+  static const showNotification = '/show-notification';
 }

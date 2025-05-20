@@ -11,13 +11,15 @@ import 'package:loggy/63-dars/page/uy-ishi/soat_detail.dart';
 import 'package:loggy/65-dars/category/page/living_detail.dart';
 import 'package:loggy/66-dars/page/journal_daily_detail.dart';
 import 'package:loggy/67-dars/page/image_picker_detail.dart';
+import 'package:loggy/71-dars/page/sending_detail.dart';
+import 'package:loggy/71-dars/page/show_notification_detail.dart';
 import 'package:loggy/core/natigation/routes.dart';
 import 'package:loggy/features/home/page/home_page.dart';
 import 'package:loggy/loggy/page/scroll.dart';
 import 'package:loggy/malumotlar/page/post_detail.dart';
 
 final router = GoRouter(
-  initialLocation: Routes.postScreen,
+  initialLocation: Routes.sending,
   routes: [
     GoRoute(
       path: Routes.home,
@@ -102,6 +104,14 @@ final router = GoRouter(
     GoRoute(
       path: Routes.postScreen,
       builder: (context, state) => PostDetail(),
+    ),
+    GoRoute(
+      path: Routes.sending,
+      builder: (context, state) => SendingDetail(),
+    ),
+    GoRoute(
+      path: Routes.showNotification,
+      builder: (context, state) => ShowNotificationDetail(),
     ),
   ],
 );
